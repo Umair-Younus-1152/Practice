@@ -1,0 +1,79 @@
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --accent:#0b69ff;
+  --success:#097a2b;
+  --danger:#cc2b2b;
+  --muted:#666;
+  --max-width:980px;
+  --radius:12px;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,var(--bg),#eef2fb);
+  color:#111;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:24px;
+}
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:20px 22px;
+  box-shadow:0 10px 30px rgba(20,30,60,0.06);
+}
+h1{margin:0 0 12px;font-size:20px}
+.score{
+  font-weight:600;
+  margin-bottom:12px;
+  color:var(--muted);
+}
+.quiz-form{display:block}
+.question{
+  border-radius:10px;
+  padding:12px;
+  background:linear-gradient(180deg,rgba(10,20,40,0.01),transparent);
+  margin-bottom:10px;
+  border:1px solid rgba(15,30,60,0.04);
+}
+.q-header{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  margin-bottom:8px;
+}
+.q-number{
+  width:34px;height:34px;border-radius:8px;
+  display:inline-grid;place-items:center;font-weight:700;
+  background:#f1f5ff;color:var(--accent);
+}
+.q-text{flex:1}
+.options{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.option{
+  display:flex;align-items:center;gap:8px;
+  background:#fff;padding:8px 10px;border-radius:8px;border:1px solid rgba(15,30,60,0.06);
+  cursor:pointer;
+}
+.option input{accent-color:var(--accent)}
+.feedback{
+  margin-top:8px;font-weight:600;display:flex;align-items:center;gap:8px;
+}
+.feedback .tick{font-size:18px}
+.final-score{margin-top:18px;font-size:18px;font-weight:700}
+.actions{display:flex;gap:10px;margin-top:14px;align-items:center}
+.btn{
+  background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:9px;cursor:pointer;font-weight:600;
+  box-shadow:0 6px 18px rgba(11,105,255,0.12);
+}
+.btn.secondary{background:#fff;color:#222;border:1px solid rgba(15,30,60,0.06);box-shadow:none}
+.correct{color:var(--success)}
+.wrong{color:var(--danger)}
+.muted{color:var(--muted);font-weight:600}
+small.hint{display:block;color:var(--muted);margin-top:12px}
+@media (max-width:640px){
+  .options{flex-direction:column}
+}

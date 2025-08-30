@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MCQ Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>MCQ Quiz — Prepositions & Grammar</h1>
+    <div id="scoreSummary" class="score">Your score: <span id="score">0</span> / <span id="total">0</span></div>
+
+    <form id="quizForm" class="quiz-form" autocomplete="off">
+      <div id="questionsContainer"></div>
+
+      <div class="actions">
+        <button type="button" id="submitBtn" class="btn">Submit</button>
+        <button type="button" id="resetBtn" class="btn secondary">Reset</button>
+      </div>
+
+      <div id="finalScore" class="final-score" aria-live="polite"></div>
+    </form>
+
+    <section class="notes">
+      <p><strong>How it works:</strong> the original table you provided is parsed automatically — this page renders all rows as questions. After you click <em>Submit</em>, each question shows feedback and the score updates.</p>
+    </section>
+  </main>
+
+  <!-- Paste the JS file path below -->
+  <script src="script.js"></script>
+</body>
+</html>
